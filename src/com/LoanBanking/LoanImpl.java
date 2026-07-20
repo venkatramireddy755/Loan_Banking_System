@@ -3,55 +3,55 @@ package com.LoanBanking;
 import java.util.Scanner;
 //in chatgpt explain or readme file howe to keep in my git and i need to explain 
 //to the interviewer;
-public class LoanImpl  {
+public class LoanImpl implements Loan{
 	static Scanner scanner = new Scanner(System.in);
 
-	boolean validateAadhar() {
+	public boolean validateAadhar() {
 		System.out.println("Enter Aadhar number");
 		String aadhar = scanner.next();
 		return aadhar.matches("\\d{12}");
 	}
 
-	boolean validatePAN() {
+	public boolean validatePAN() {
 		System.out.println("Enter your PAN number");
 		String pan = scanner.next();
 		return pan.matches("[A-Z]{5}[0-9]{4}[A-Z]");
 
 	}
 
-	boolean validatePhone() {
+	public boolean validatePhone() {
 		System.out.println("Enter your Phone number");
 		String phone = scanner.next();
 		return phone.matches("[6-9][0-9]{9}");
 	}
 
-	double getCustomerSalary() {
+	public double getCustomerSalary() {
 		System.out.println("Enter you salary");
 		double salary = scanner.nextDouble();
 		return salary;
 
 	}
 
-	double getCustomerAge() {
+	public double getCustomerAge() {
 		System.out.println("Enter your age");
 		double age = scanner.nextDouble();
 		return age;
 	}
 
-	double getCibilScore() {
+	public double getCibilScore() {
 		System.out.println("enter your cibil score");
 		int cibil = scanner.nextInt();
 		return cibil;
 	}
 
-	double getRoIinfo() {
+	public double getRoIinfo() {
 		// roi stands for rate of interest
 		double roi = 12.0;
 
 		return roi;
 	}
 
-	String getAddressInfo() {
+	public String getAddressInfo() {
 		String address = "";
 		System.out.println("Enter your flat number");
 		String flat = scanner.next();
